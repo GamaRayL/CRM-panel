@@ -8,7 +8,7 @@ const initialState: NavElementsState = {
       id: 1,
       name: "Главная",
       img: "images/main.svg",
-      selected: false,
+      selected: true,
     },
     {
       id: 2,
@@ -47,12 +47,12 @@ const initialState: NavElementsState = {
       selected: false,
       expansion: [
         {
-          id: 1,
+          id: 9,
           name: "Настройки профиля",
           img: "images/profile.svg",
         },
         {
-          id: 2,
+          id: 10,
          name: "Управление финансами",
          img: "images/finance.svg",
         }
@@ -64,18 +64,17 @@ const initialState: NavElementsState = {
       img: "images/out.svg",
       selected: false,
     },
-    
   ],
 };
 
-export const navSlice = createSlice({
+const navSlice = createSlice({
   name: "navElements",
   initialState,
   reducers: {
-    toggleSelect(state, action: PayloadAction<number>) {
+    toggleSelect(state, action: PayloadAction<string>) {
       state.navElements = state.navElements.map(
-        (item: Element) => item.id === action.payload
-        ? {...item, selected: !item.selected}
+        (item: Element) => item.name === action.payload
+        ? {...item, selected: true}
         : {...item, selected: false}
       );
     }

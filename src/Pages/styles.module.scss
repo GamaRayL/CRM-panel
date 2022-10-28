@@ -1,6 +1,90 @@
 @import "styles/_fontSize";
+@import "styles/_colors";
 
-.header {
+.title {
     font-size: $titleSize; 
     font-weight: 700;
+}
+
+.form {
+    display: flex;
+    gap: 24px;
+    height: 70px;
+}
+
+.inputSearch {
+    padding: 24px;
+    font-size: 20px;
+    font-weight: 200;
+    width: 100%;
+    border: 3px solid;
+    border-radius: 10px;
+    outline: none;
+    border-color: $primaryColor;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: $black;
+}
+
+.inputSearch::placeholder {
+    color: #6C6C6C;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: $primaryColor;
+    gap: 16px;
+    padding: 19px 40px;
+    border-radius: 10px;
+    border: none;
+    max-width: 217px;
+}
+
+.buttonText {
+    color: #fff;
+    font-size: $titleSize;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.addressList {
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 4px 1px #d6d6d6;
+}
+
+.subtitle{
+    font-size: $titleSize;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 16px;
+}
+
+.addressItem {
+    border-top: 1px solid $gray;
+    list-style-type: none;
+    padding: 16px 0;
+}
+
+@media screen and (max-width: 1140px) {
+    .form {
+        flex-direction: column;
+        height: auto;
+    }
+    .inputSearch {
+        width: auto;
+    }
+    .buttonText {
+        font-size: $primarySize;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .inputSearch {
+        width: auto;
+        padding: 16px;
+        font-size: 14px;
+    }
 }

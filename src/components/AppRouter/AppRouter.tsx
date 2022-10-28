@@ -1,15 +1,21 @@
+import { AddressSearch, News } from "Pages";
+import { Dispatch, SetStateAction } from "react";
 import { Routes, Route } from "react-router-dom";
-import { routes } from "routes";
 import styles from "./styles.module.scss";
 
-export const AppRouter = () => {
+interface AppRouterProps {
+    setAddress: Dispatch<SetStateAction<string>>;
+    arrayAddresses: any;
+}
+
+export const AppRouter = ({ setAddress, arrayAddresses }: AppRouterProps) => {
+
     return (
         <main className={styles.main}>
             <div className={styles.wrap}>
                 <Routes>
-                    {routes.map(({ path, page }) => (
-                        <Route key={path} path={path} element={page} />
-                    ))}
+                    <Route path="/" element={<News />} />
+                    <Route path="/address" element={<AddressSearch setAddress={setAddress} arrayAddresses={arrayAddresses} />} />
                 </Routes>
             </div>
         </main>

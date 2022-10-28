@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { NEWS_ROUTE } from "utils/const";
 import styles from "./styles.module.scss";
 
 export const AppBar = () => {
     const navigate = useNavigate();
     return (
         <header className={styles.header}>
-            <div className={styles.logo} onClick={() => navigate(NEWS_ROUTE)}>
+            <div className={styles.logo} onClick={() => navigate("/")}>
                 <img className={styles.logo__icon} src="images/logo.svg" alt="" />
                 <span className={styles.logo__name}>Wrench CRM</span>
             </div>
