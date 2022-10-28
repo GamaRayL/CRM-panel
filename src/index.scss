@@ -1,0 +1,15 @@
+@import "styles/_fontSize";
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $primarySize;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

@@ -1,0 +1,57 @@
+@import "styles/_colors";
+@import "styles/_positions";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primaryColor;
+    padding: 16px 32px;
+}
+
+.logo, .profile {
+    cursor: pointer;
+}
+
+.logo {
+    @include flexCenterGap(24px);
+}
+
+.logo__icon {
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover .logo__icon {
+    transform: rotate(10deg)
+}
+
+.profile {
+    @include flexCenterGap(16px);
+}
+
+.logo__name, .profile__name {
+  color: white;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 1140px) {
+    .logo__name, .profile__name {
+        font-size: 16px;
+    }
+    
+    .logo__icon, .profile__icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .logo__name {
+        display: none;
+    }
+    
+    .logo__icon, .profile__icon {
+        width: 32px;
+        height: 32px;
+    }
+}

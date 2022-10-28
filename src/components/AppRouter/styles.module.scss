@@ -1,0 +1,27 @@
+@import "styles/_colors";
+
+.main {
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+}
+
+.wrap {
+    padding: 32px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 6px;
+}
+  
+.scroll::-webkit-scrollbar-thumb {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: $primaryColor;
+}
+
+
+@media screen and (max-width: 1140px) {
+    .main {
+        font-size: 16px;
+    }
+}
