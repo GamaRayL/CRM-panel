@@ -68,6 +68,20 @@
     padding: 16px 0;
 }
 
+.addressLink {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease-in-out;
+}
+
+.addressLink:hover {
+    color: $primaryColor;
+}
+
+.addressLink:focus {
+    color: $primaryColor;
+}
+
 @media screen and (max-width: 1140px) {
     .form {
         flex-direction: column;

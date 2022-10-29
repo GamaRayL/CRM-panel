@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import "./App.scss";
 
 function App() {
-  const [address, setAddress] = useState<string>("Махачкала");
+  const [address, setAddress] = useState<string>("");
   const [arrayAddresses, setArrayAddresses] = useState();
 
   interface FetchOptions {
