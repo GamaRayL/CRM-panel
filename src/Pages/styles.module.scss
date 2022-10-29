@@ -24,6 +24,12 @@
     font-family: "Montserrat";
     font-weight: 500;
     color: $black;
+
+    @media screen and (max-width: 768px) {
+        width: auto;
+        padding: 16px;
+        font-size: 14px;
+    }
 }
 
 .inputSearch::placeholder {
@@ -40,6 +46,12 @@
     border-radius: 10px;
     border: none;
     max-width: 217px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    fill: white;
 }
 
 .buttonText {
@@ -95,10 +107,3 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .inputSearch {
-        width: auto;
-        padding: 16px;
-        font-size: 14px;
-    }
-}

@@ -16,8 +16,18 @@
     @include flexCenterGap(24px);
 }
 
-.logo__icon {
+.logo__icon, .profile__icon {
+    width: 32px;
+    height: 32px;
     transition: 0.3s ease-in-out;
+}
+
+.logo__icon {
+    fill: white;
+}
+
+.profile__icon {
+    fill: none;
 }
 
 .logo:hover .logo__icon {

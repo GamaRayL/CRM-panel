@@ -1,7 +1,7 @@
 export interface Element {
     id: number;
     name: string;
-    img: string;
+    svg: string;
     selected?: boolean;
     expansion?: Element[];
 }

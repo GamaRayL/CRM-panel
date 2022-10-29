@@ -7,11 +7,15 @@ export const AppBar = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo} onClick={() => navigate("/")}>
-                <img className={styles.logo__icon} src="images/logo.svg" alt="" />
+                <svg className={styles.logo__icon}>
+                    <use xlinkHref="images/sprite.svg#logo"></use>
+                </svg>
                 <span className={styles.logo__name}>Wrench CRM</span>
             </div>
             <div className={styles.profile}>
-                <img className={styles.profile__icon} src="images/person.svg" alt="" />
+                <svg className={styles.profile__icon}>
+                    <use xlinkHref="images/sprite.svg#person"></use>
+                </svg>
                 <span className={styles.profile__name}>Имя Фамилия</span>
             </div>
         </header>

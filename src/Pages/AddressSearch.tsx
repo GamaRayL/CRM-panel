@@ -31,7 +31,9 @@ export const AddressSearch = ({ setAddress, arrayAddresses }: AddressSearchProps
                     onChange={(e) => setValue(e.target.value)}
                 />
                 <button type="submit" className={styles.button} >
-                    <img src="images/searchW.svg" alt="" />
+                    <svg className={styles.icon}>
+                        <use xlinkHref="images/sprite.svg#search"></use>
+                    </svg>
                     <span className={styles.buttonText}>Поиск</span>
                 </button>
             </form>

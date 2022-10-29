@@ -24,6 +24,7 @@
 
 .settingsList {
     @include flexCenterGap(32px);
+    padding-top: 40px;
     flex-direction: column;
 }
 
@@ -47,8 +48,10 @@
 }
 
 .icon {
+    width: 32px;
+    height: 32px;
     padding-left: 32px;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .name {

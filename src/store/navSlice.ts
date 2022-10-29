@@ -7,61 +7,61 @@ const initialState: NavElementsState = {
     {
       id: 1,
       name: "Главная",
-      img: "images/main.svg",
-      selected: true,
+      svg: "images/sprite.svg#main",
+      selected: false,
     },
     {
       id: 2,
       name: "Поиск адресов",
-      img: "images/search.svg",
+      svg: "images/sprite.svg#search",
       selected: false,
     },
     {
       id: 3,
       name: "Таблицы",
-      img: "images/tables.svg",
+      svg: "images/sprite.svg#tables",
       selected: false,
     },
     {
       id: 4,
       name: "Календарь",
-      img: "images/calendar.svg",
+      svg: "images/sprite.svg#calendar",
       selected: false,
     },
     {
       id: 5,
       name: "Карты",
-      img: "images/marker.svg",
+      svg: "images/sprite.svg#marker",
       selected: false,
     },
     {
       id: 6,
       name: "Виджеты",
-      img: "images/widget.svg",
+      svg: "images/sprite.svg#widget",
       selected: false,
     },
     {
       id: 7,
       name: "Настройки",
-      img: "images/settings.svg",
+      svg: "images/sprite.svg#settings",
       selected: false,
       expansion: [
         {
           id: 9,
           name: "Настройки профиля",
-          img: "images/profile.svg",
+          svg: "images/sprite.svg#profile",
         },
         {
           id: 10,
-         name: "Управление финансами",
-         img: "images/finance.svg",
+          name: "Управление финансами",
+          svg: "images/sprite.svg#finance",
         }
       ]
     },
     {
       id: 8,
       name: "Выход",
-      img: "images/out.svg",
+      svg: "images/sprite.svg#out",
       selected: false,
     },
   ],
