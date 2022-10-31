@@ -1,0 +1,7 @@
+@import "styles/_sizes";
+@import "styles/_weights";
+
+.title {
+    font-size: $titleFontSize; 
+    font-weight: $bold;
+}

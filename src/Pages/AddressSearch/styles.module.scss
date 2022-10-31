@@ -1,8 +1,9 @@
-@import "styles/_fontSize";
+@import "styles/_sizes";
 @import "styles/_colors";
+@import "styles/_weights";
 
 .title {
-    font-size: $titleSize; 
+    font-size: $titleFontSize; 
     font-weight: 700;
 }
 
@@ -10,11 +11,16 @@
     display: flex;
     gap: 24px;
     height: 70px;
+
+    @media screen and (max-width: 1140px) {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 .inputSearch {
     padding: 24px;
-    font-size: 20px;
+    font-size: $primaryFontSize;
     font-weight: 200;
     width: 100%;
     border: 3px solid;
@@ -22,18 +28,21 @@
     outline: none;
     border-color: $primaryColor;
     font-family: "Montserrat";
-    font-weight: 500;
+    font-weight: $primary;
     color: $black;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1140px) {
         width: auto;
+    }
+
+    @media screen and (max-width: 768px) {
         padding: 16px;
         font-size: 14px;
     }
 }
 
 .inputSearch::placeholder {
-    color: #6C6C6C;
+    color: $darkGray;
 }
 
 .button {
@@ -49,27 +58,29 @@
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
-    fill: white;
+    fill: $white;
 }
 
 .buttonText {
-    color: #fff;
-    font-size: $titleSize;
+    color: $white;
+    font-size: $titleFontSize;
     font-family: "Montserrat";
-    font-weight: 700;
+    font-weight: $bold;
+
+    @media screen and (max-width: 1140px) {
+        font-size: $primaryFontSize;
+    }
 }
 
 .addressList {
     border-radius: 10px;
     padding: 24px;
-    box-shadow: 0 2px 4px 1px #d6d6d6;
+    box-shadow: 0 2px 4px 1px $gray;
 }
 
 .subtitle{
-    font-size: $titleSize;
-    font-weight: bold;
+    font-size: $titleFontSize;
+    font-weight: $bold;
     margin: 0;
     padding-bottom: 16px;
 }
@@ -92,18 +103,5 @@
 
 .addressLink:focus {
     color: $primaryColor;
-}
-
-@media screen and (max-width: 1140px) {
-    .form {
-        flex-direction: column;
-        height: auto;
-    }
-    .inputSearch {
-        width: auto;
-    }
-    .buttonText {
-        font-size: $primarySize;
-    }
 }
 

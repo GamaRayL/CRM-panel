@@ -1,4 +1,5 @@
 @import "styles/_colors";
+@import "styles/_sizes";
 
 .main {
     height: calc(100vh - 80px);
@@ -22,6 +23,6 @@
 
 @media screen and (max-width: 1140px) {
     .main {
-        font-size: 16px;
+        font-size: $mobileFontSize;
     }
 }

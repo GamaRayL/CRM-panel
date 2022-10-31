@@ -1,17 +1,13 @@
 .mainContent {
     display: grid;
     grid-template-columns: 300px 1fr;
-}
-
-@media screen and (max-width: 1140px) {
-    .mainContent {
+    @media screen and (max-width: 1140px) {
         grid-template-columns: 240px 1fr;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .mainContent {
+    @media screen and (max-width: 768px) {
         display: grid;
         grid-template-columns: 0px 1fr;
     }
 }
+
+

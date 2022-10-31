@@ -1,5 +1,7 @@
 @import "styles/_colors";
 @import "styles/_positions";
+@import "styles/_sizes";
+@import "styles/_weights";
 
 .header {
     display: flex;
@@ -12,56 +14,39 @@
     cursor: pointer;
 }
 
+.icon {
+    fill: $white;
+    transition: 0.3s ease-in-out;
+    @include iconSize(48px);
+    @media screen and (max-width: 1140px) {
+        @include iconSize(32px)
+    }
+}
+
 .logo {
     @include flexCenterGap(24px);
-}
-
-.logo__icon, .profile__icon {
-    width: 32px;
-    height: 32px;
-    transition: 0.3s ease-in-out;
-}
-
-.logo__icon {
-    fill: white;
-}
-
-.profile__icon {
-    fill: none;
-}
-
-.logo:hover .logo__icon {
-    transform: rotate(10deg)
+    @media screen and (max-width: 520px) {
+        &__name {
+            display: none;
+        }
+    }
 }
 
 .profile {
     @include flexCenterGap(16px);
-}
-
-.logo__name, .profile__name {
-  color: white;
-  font-weight: bold;
-}
-
-
-@media screen and (max-width: 1140px) {
-    .logo__name, .profile__name {
-        font-size: 16px;
-    }
-    
-    .logo__icon, .profile__icon {
-        width: 32px;
-        height: 32px;
+    &__icon {
+        fill: none;
     }
 }
 
-@media screen and (max-width: 520px) {
-    .logo__name {
-        display: none;
-    }
-    
-    .logo__icon, .profile__icon {
-        width: 32px;
-        height: 32px;
+.logo:hover .icon {
+    transform: rotate(10deg)
+}
+
+.name {
+  color: $white;
+  font-weight: $bold;
+  @media screen and (max-width: 1140px) {
+    font-size: $mobileFontSize;
     }
 }

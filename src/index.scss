@@ -1,11 +1,11 @@
-@import "styles/_fontSize";
+@import "styles/_sizes";
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: $primarySize;
+  font-size: $primaryFontSize;
   font-weight: 500;
   overflow: hidden;
 }

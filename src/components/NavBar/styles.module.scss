@@ -1,5 +1,7 @@
 @import "styles/_positions";
 @import "styles/_colors";
+@import "styles/_sizes";
+@import "styles/_weights";
 
 .navbar {
     box-shadow: 0 0 6px 0 #d6d6d6;
@@ -14,12 +16,16 @@
     flex-direction: column;
     padding-left: 0px;
     gap: 40px;
+
+    @media screen and (max-width: 1140px) {
+        font-size: $mobileFontSize;
+    }
 }
   
 .list:before{
     content: attr(aria-label);
     padding-left: 32px;
-    font-weight: bold;
+    font-weight: $bold;
 }
 
 .settingsList {
@@ -32,7 +38,7 @@
     @include flexCenterGap(16px);
     cursor: pointer;
     transition: 0.1s ease-in-out;
-    border-right: 3px solid #fff;
+    border-right: 3px solid $white;
 }
 
 .element:hover {
@@ -48,10 +54,14 @@
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
+    @include iconSize(32px);
     padding-left: 32px;
     transition: 0.1s ease-in-out;
+
+    @media screen and (max-width: 1140px) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .name {
@@ -60,13 +70,6 @@
 }
 
 
-@media screen and (max-width: 1140px) {
-    .list {
-        font-size: 18px;
-    }
-    
-    .icon {
-        width: 24px;
-        height: 24px;
-    }
-}
+
+
+

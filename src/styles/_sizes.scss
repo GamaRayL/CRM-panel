@@ -1,0 +1,9 @@
+$primaryFontSize: 20px;
+$titleFontSize: 26px;
+$mobileFontSize: 16px;
+
+@mixin iconSize($size) {
+    width: $size;
+    height: $size;
+}
+
