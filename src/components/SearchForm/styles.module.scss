@@ -1,0 +1,64 @@
+@import "styles/_sizes";
+@import "styles/_colors";
+@import "styles/_weights";
+
+.form {
+    display: flex;
+    gap: 24px;
+    height: 70px;
+
+    @media screen and (max-width: 1140px) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.input {
+    padding: 24px;
+    font-size: $primaryFontSize;
+    font-weight: 200;
+    width: 100%;
+    border: 3px solid;
+    border-radius: 10px;
+    outline: none;
+    border-color: $primaryColor;
+    font-family: "Montserrat";
+    font-weight: $primary;
+    color: $black;
+
+    @media screen and (max-width: 1140px) {
+        width: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 16px;
+        font-size: 14px;
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: $primaryColor;
+    gap: 16px;
+    padding: 19px 40px;
+    border-radius: 10px;
+    border: none;
+    max-width: 217px;
+}
+
+.icon {
+    fill: $white;
+}
+
+.buttonText {
+    color: $white;
+    font-size: $titleFontSize;
+    font-family: "Montserrat";
+    font-weight: $bold;
+
+    @media screen and (max-width: 1140px) {
+        font-size: $primaryFontSize;
+    }
+}

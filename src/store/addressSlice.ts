@@ -8,12 +8,12 @@ const addressSlice = createSlice({
   name: "address",
   initialState,
   reducers: {
-    setAddress(state, action) {
+    updateAddress(state, action) {
       state.address = action.payload;
     },
   },
 });
 
-export const { setAddress } = addressSlice.actions;
+export const { updateAddress } = addressSlice.actions;
 
 export default addressSlice.reducer;

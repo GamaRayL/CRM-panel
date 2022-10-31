@@ -1,4 +1,4 @@
-import { AddressSearch } from "./AddressSearch/AddressSearch";
+import { Addresses } from "./Addresses/Addresses";
 import { News } from "./News/News";
 
-export { AddressSearch, News };
+export { Addresses, News };

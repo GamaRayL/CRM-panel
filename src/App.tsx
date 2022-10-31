@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { AppBar, AppRouter, NavBar } from "./components";
-import { store } from "store/store";
-import { Provider } from "react-redux";
+import { useAppSelector } from "hooks";
+import { AppBar, AppRouter, NavBar } from "components";
 import "./App.scss";
 
 function App() {
-  const [address, setAddress] = useState<string>("");
+  const address = useAppSelector(state => state.address.address);
   const [arrayAddresses, setArrayAddresses] = useState();
 
   interface FetchOptions {
@@ -40,16 +39,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Provider store={store}>
-        <AppBar />
-        <div className="mainContent">
-          <NavBar />
-          <AppRouter
-            setAddress={setAddress}
-            arrayAddresses={arrayAddresses}
-          />
-        </div>
-      </Provider>
+      <AppBar />
+      <div className="mainContent">
+        <NavBar />
+        <AppRouter
+          arrayAddresses={arrayAddresses}
+        />
+      </div>
     </BrowserRouter>
   );
 }
