@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { useAppSelector } from "hooks";
+import { FetchOptions, IAddresses } from "types";
 import { AppBar, AppRouter, NavBar } from "components";
 import "./App.scss";
 
 function App() {
   const address = useAppSelector(state => state.address.address);
-  const [arrayAddresses, setArrayAddresses] = useState();
-
-  interface FetchOptions {
-    method: "GET" | "POST";
-    headers: HeadersInit;
-    body: string;
-    mode: "cors" | "no-cors" | "same-origin";
-  }
+  const [arrayAddresses, setArrayAddresses] = useState<IAddresses>();
 
   useEffect(() => {
     async function getSetData() {

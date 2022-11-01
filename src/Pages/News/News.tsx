@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import styles from "./styles.module.scss";
 
-export const News = () => {
+export const News: FC = () => {
     return (
         <article>
             <h1 className={styles.title}>Новости</h1>

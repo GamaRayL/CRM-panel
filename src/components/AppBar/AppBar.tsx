@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-export const AppBar = () => {
+export const AppBar: FC = () => {
     const navigate = useNavigate();
     return (
         <header className={styles.header}>

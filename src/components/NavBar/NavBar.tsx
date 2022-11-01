@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSelect, RootState } from "store";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-export const NavBar = () => {
+export const NavBar: FC = () => {
     const navElements = useSelector((state: RootState) => state.navElements.navElements);
     const dispatch = useDispatch();
     const navigate = useNavigate();

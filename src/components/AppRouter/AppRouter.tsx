@@ -1,12 +1,10 @@
-import { Addresses, News } from "Pages";
+import { FC } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Addresses, News } from "Pages";
+import { IAddressesProps } from "types";
 import styles from "./styles.module.scss";
 
-interface AppRouterProps {
-    arrayAddresses: any;
-}
-
-export const AppRouter = ({ arrayAddresses }: AppRouterProps) => {
+export const AppRouter: FC<IAddressesProps> = ({ arrayAddresses }) => {
 
     return (
         <main className={styles.main}>

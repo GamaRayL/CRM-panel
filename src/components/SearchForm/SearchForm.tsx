@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { useAppDispatch } from "hooks";
 import { updateAddress } from "store/addressSlice";
 import styles from "./styles.module.scss";
 
-export const SearchForm = () => {
+export const SearchForm: FC = () => {
     const [value, setValue] = useState<string>("");
     const dispatch = useAppDispatch();
 
